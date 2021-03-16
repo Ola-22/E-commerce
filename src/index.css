@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slick-dots{
+  position: absolute;
+  top: 90%;
+  color: white;
+  
+}
+.slick-dots li{
+  width: 20px;
+}
+.slick-dots li button:before {
+  color: white;
+  font-size: 15px;
+}
+/* 
+.slick-active{
+  background-color: white;
+} */
