@@ -12,7 +12,6 @@ export const SliderContent = styled.div`
   justify-content: center;
   margin-left: 50px;
 `;
-export const SliderTitle = styled.h1``;
 
 export const SliderPara = styled.p`
   width: 30%;
@@ -24,13 +23,13 @@ export const SliderPara = styled.p`
 export const SliderBtn = styled.button`
   width: 120px;
   padding: 10px 15px;
-  border: 1px solid #ffb338;
+  border: 1px solid var(--primary-color);
   border-radius: 20px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
   font-size: 15px;
-  background-color: #ffb338;
+  background-color: var(--primary-color);
   margin: auto;
   margin-top: 20px;
 `;
