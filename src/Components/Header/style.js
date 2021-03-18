@@ -11,7 +11,7 @@ export const HeaderMain = styled.div`
   justify-content: space-between;
   background-color: rgba(24, 24, 19, 0.7);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: white;
+  color: var(--white-color);
   padding: 15px 0;
 `;
 

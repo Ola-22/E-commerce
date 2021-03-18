@@ -10,7 +10,7 @@ export const PrevArrow = styled.div`
     display: none;
   }
   &:hover {
-    color: #ffb338;
+    color: var(--primary-color);
   }
 `;
 
@@ -27,7 +27,7 @@ export const NextArrow = styled.div`
     display: none;
   }
   &:hover {
-    color: #ffb338;
+    color: var(--primary-color);
   }
 `;
 

@@ -19,6 +19,11 @@ code {
   box-sizing: border-box;
 }
 
+:root{
+  --primary-color: #ffb338;
+  --white-color: #fff;
+  --black-color: #000;
+}
 .slick-dots{
   position: absolute;
   top: 90%;
@@ -32,7 +37,5 @@ code {
   color: white;
   font-size: 15px;
 }
-/* 
-.slick-active{
-  background-color: white;
-} */
+
+
