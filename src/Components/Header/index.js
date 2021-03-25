@@ -5,8 +5,14 @@ import {
   faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import * as S from "./style";
+import { DataContext } from "../../Context/DataProvider";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
+function Header(props) {
+  const value = useContext(DataContext);
+  const [cart] = value.cart;
+
   return (
     <S.HeaderMain>
       <S.DivBar>
@@ -14,7 +20,12 @@ function Header() {
       </S.DivBar>
       <S.RightSide>
         <FontAwesomeIcon icon={faSearch} style={{ marginRight: "20px" }} />
-        <FontAwesomeIcon icon={faShoppingCart} />
+        <span style={{ position: "relative" }}>
+          <span>{cart.length}</span>
+          <Link to="/cart">
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </Link>
+        </span>
       </S.RightSide>
     </S.HeaderMain>
   );

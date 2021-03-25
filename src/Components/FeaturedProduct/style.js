@@ -9,42 +9,52 @@ export const ProductMain = styled.div`
 `;
 
 export const ProductDiv = styled.div`
+  @media (max-width: 1200px) {
+    margin-top: 20px;
+  }
   &:nth-child(2),
   &:nth-child(5),
   &:nth-child(8),
   &:nth-child(11) {
     margin-top: 25px;
+    @media (max-width: 1200px) {
+      margin-top: 0;
+    }
     div {
-      top: 87%;
+      top: 88%;
     }
   }
   &:nth-child(2) > img {
     border-radius: 10px;
   }
   position: relative;
-  z-index: 1;
 
   div {
-    visibility: hidden;
     background: linear-gradient(0deg, #181813 0%, rgba(24, 24, 19, 0) 174.29%);
     position: absolute;
-    width: 98.5%;
+    width: 100%;
     border-radius: 0 0 15px 15px;
-    top: 83.2%;
-    left: 3px;
-    height: 0;
-    z-index: 2;
+    top: 83.7%;
+    height: 60px;
     color: var(--white-color);
     display: flex;
     justify-content: space-between;
     font-size: 25px;
     align-items: center;
-    & > img {
+    & > button {
+      border: none;
       width: 30px;
       height: 30px;
-      object-fit: cover;
-      margin-inline-end: 2em;
-      z-index: 3;
+      border-radius: 50%;
+      margin-inline-end: 2.5em;
+      & > img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        &:hover {
+          border: none;
+        }
+      }
     }
     span {
       font-family: "JacquesFrancois";
@@ -55,16 +65,19 @@ export const ProductDiv = styled.div`
   img {
     width: 400px;
     height: 520px;
-    &:hover ~ div {
-      visibility: visible;
-      z-index: 20;
-      height: 60px;
+    /* &:hover ~ div {
+      width: 98.4%;
+      left: 3px;
+      top: 83.4%;
+    } */
+    @media (max-width: 800px) {
+      width: 450px;
     }
-    /* &:hover {
+    &:hover {
       border: 3px solid var(--primary-color);
       border-radius: 15px;
       transition: 0.1s ease;
-    } */
+    }
   }
 `;
 

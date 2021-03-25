@@ -21,4 +21,17 @@ export const DivBar = styled.div`
 
 export const RightSide = styled.div`
   margin-right: 5%;
+  & span {
+    &:first-child {
+      position: absolute;
+      top: -12px;
+      right: -7px;
+      background: var(--primary-color);
+      font-size: 10px;
+      color: white;
+      padding: 3px 5px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
 `;
