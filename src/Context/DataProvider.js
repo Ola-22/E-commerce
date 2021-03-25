@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
 import {
   Product1,
@@ -79,8 +80,32 @@ function DataProvider(props) {
     },
   ]);
 
+  const [cart, setCart] = useState([]);
+
+  function addCart(id) {
+    const check = cart.every((item) => {
+      return item._id !== id;
+    });
+    if (check) {
+      const data = products.filter((product) => {
+        return product._id === id;
+      });
+      setCart([...cart, ...data]);
+    }
+  }
+  useEffect(() => {
+    const dataCart = JSON.parse(localStorage.getItem("dataCart"));
+    if (dataCart) setCart(dataCart);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("dataCart", JSON.stringify(cart));
+  }, [cart]);
+
   const value = {
     products: [products, setProducts],
+    cart: [cart, setCart],
+    addCart: addCart,
   };
   return (
     <DataContext.Provider value={value}>{props.children}</DataContext.Provider>

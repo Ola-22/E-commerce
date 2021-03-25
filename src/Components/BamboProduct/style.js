@@ -12,6 +12,7 @@ export const ListProduct = styled.ul`
   list-style: none;
   justify-content: center;
   margin-bottom: 5em;
+  flex-wrap: nowrap;
   & > li {
     margin-inline-start: 3em;
     color: #181813;
@@ -27,4 +28,10 @@ export const BamboImg = styled.img`
   max-width: 100%;
   width: 28%;
   margin-inline-start: 3.5em;
+  @media (max-width: 1100px) {
+    margin-inline-start: 2em;
+    width: 90%;
+    margin-top: 20px;
+    object-fit: cover;
+  }
 `;

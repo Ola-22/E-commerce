@@ -6,6 +6,7 @@ import { Group3 } from "../../img";
 function FeaturedProduct() {
   const value = useContext(DataContext);
   const [products] = value.products;
+  const addCart = value.addCart;
 
   return (
     <>
@@ -16,7 +17,9 @@ function FeaturedProduct() {
             <img src={product.src} alt="" />
             <div>
               <span>${product.price}</span>
-              <img src={Group3} alt="" />
+              <button onClick={() => addCart(product._id)}>
+                <img src={Group3} alt="" />
+              </button>
             </div>
           </S.ProductDiv>
         ))}

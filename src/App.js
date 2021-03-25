@@ -1,22 +1,19 @@
 import "./App.css";
-import BamboProduct from "./Components/BamboProduct";
-import FeaturedProduct from "./Components/FeaturedProduct";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import SliderComp from "./Components/Slider";
-import DataProvider from "./Context/DataProvider";
-
+import Cart from "./Components/Cart";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Pages/Home";
 function App() {
   return (
-    <DataProvider>
-      <div className="App">
-        <Header />
-        <SliderComp />
-        <FeaturedProduct />
-        <BamboProduct />
-        <Footer />
-      </div>
-    </DataProvider>
+    <div className="App">
+      <Router>
+        <Home />
+        <Switch>
+          <Route path="/cart" exact>
+            <Cart />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const SliderImg = styled.img`
   width: 100%;
   max-width: 100%;
+  @media (max-width: 600px) {
+    height: 350px;
+  }
 `;
 
 export const PrevArrow = styled.div`
@@ -28,6 +31,9 @@ export const NextArrow = styled.div`
   }
   &:hover {
     color: var(--primary-color);
+  }
+  @media (max-width: 600px) {
+    right: 7%;
   }
 `;
 

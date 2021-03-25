@@ -11,6 +11,12 @@ export const SliderContent = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 50px;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+  @media (max-width: 1200px) {
+    width: 62rem;
+  }
 `;
 
 export const SliderPara = styled.p`
